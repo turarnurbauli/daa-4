@@ -1,5 +1,8 @@
 # Smart City / Smart Campus Scheduling - Assignment 4
 
+**Author:** Turar Nurbauli  
+**Group:** SE-2425
+
 ## Overview
 
 This project implements graph algorithms for analyzing city-service task dependencies:
@@ -131,33 +134,36 @@ All datasets are stored in JSON format with the following structure:
 
 ## Running the Project
 
-### Prerequisites
+### Using IntelliJ IDEA
 
-- Java 11 or higher
-- Maven 3.6+ (for building and testing)
+1. **Open the project:**
+   - Open IntelliJ IDEA
+   - File → Open → Select the project folder
+   - IntelliJ will automatically detect Maven project and download dependencies
 
-### Building the Project
+2. **Run the main program:**
+   - Open `src/main/java/Main.java`
+   - Right-click on the file → Run 'Main.main()'
+   - In "Program arguments", enter: `data/small1.json`
+   - Click Run
+
+3. **Run tests:**
+   - Right-click on `src/test/java` folder → Run 'All Tests'
+   - Or run individual test files
+
+4. **Try different datasets:**
+   - Change program arguments to: `data/small2.json`, `data/medium1.json`, etc.
+
+### Using Command Line (Optional)
 
 ```bash
+# Build project
 mvn clean compile
-```
 
-### Running Tests
-
-```bash
+# Run tests
 mvn test
-```
 
-### Running the Main Program
-
-```bash
-# Compile first
-mvn compile
-
-# Run with a dataset
-java -cp "target/classes:target/dependency/*" Main data/small1.json
-
-# Or use Maven exec plugin
+# Run main program
 mvn exec:java -Dexec.mainClass="Main" -Dexec.args="data/small1.json"
 ```
 
@@ -344,10 +350,6 @@ This project follows proper Git workflow:
 - **Feature branches:** For experimental implementations
 - **Clear commits:** Descriptive commit messages
 - **README:** Comprehensive documentation (this file)
-
-## Author
-
-DAA Assignment 4 - Smart City Scheduling
 
 ## License
 
